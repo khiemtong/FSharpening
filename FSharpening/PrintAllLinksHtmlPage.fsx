@@ -16,16 +16,17 @@ let printHtmlNode (htmlNode:HtmlNode) =
 let printSeq n printFn = 
     Seq.iter printFn n
 
-let wc = new WebClient()
-let lines = wc.DownloadString("http://news.google.com")
-
 // Dynamic casting
 let tryCast<'a> o = 
     match box o with
         | :? 'a as output -> Some output
         | _ -> None
 
-let parseDoc lines = 
+let parseUrl (url:string) = 
+
+    let wc = new WebClient()
+    let lines = wc.DownloadString(url)
+
 
     let htmlDoc = new HtmlDocument();
     htmlDoc.LoadHtml(lines);
@@ -34,4 +35,4 @@ let parseDoc lines =
 
     nodes |> tryCast<seq<HtmlNode>> |> Option.iter (fun it -> (printSeq it printHtmlNode))
 
-parseDoc lines
+parseUrl "http://google.com"
