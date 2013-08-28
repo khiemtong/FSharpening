@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+	<title>javascript - How do I get started with Node.js - Stack Overflow</title>
+	<link rel="shortcut icon" href="http://cdn.sstatic.net/stackoverflow/img/favicon.ico">
+	<link rel="apple-touch-icon image_src" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+	<link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="http://stackoverflow.com/opensearch.xml">
+	
+	<script type="text/javascript" async="" src="http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=javascript,node.js,x-user-registered&xReferrer=https://www.google.com/"></script><script type="text/javascript" async="" src="./stackoverflow_files/ga.js"></script><script type="text/javascript" async="" src="./stackoverflow_files/quant.js"></script><script type="text/javascript" src="./stackoverflow_files/jquery.min.js"></script><style type="text/css"></style>
+	<script type="text/javascript" src="./stackoverflow_files/stub.js"></script>
+	<link rel="stylesheet" type="text/css" href="./stackoverflow_files/all.css">
+	
+	<link rel="canonical" href="./stackoverflow_files/stackoverflow.html">
+	<script type="text/javascript">
+		
+		StackExchange.ready(function () {
+			StackExchange.using("postValidation", function () {
+				StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+			});
+
+			
+			StackExchange.question.init({votesCast:[],autoShowCommentHelp:true,showAnswerHelp:true,totalCommentCount:2,shownCommentCount:2,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:2353818});
+
+			styleCode();
+
+				StackExchange.realtime.subscribeToQuestion('1', '2353818');
+			
+					});
+	</script>
+
+
+	<script type="text/javascript">
+		StackExchange.init({"stackAuthUrl":"https://stackauth.com","serverTime":1377706546,"styleCode":true,"enableUserHovercards":true,"site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","enableSocialMediaInSharePopup":true},"user":{"fkey":"8c5a7c0cf59097e713c47a04fd7a73cd","isRegistered":true,"userId":671801,"accountId":341288,"gravatar":"<div class=\"\"><img src=\"https://www.gravatar.com/avatar/2a9239665208e06ece41f8cc1ef1dbf1?s=32&d=identicon&r=PG\" alt=\"\" width=\"32\" height=\"32\"></div>","profileUrl":"http://stackoverflow.com/users/671801/kdtong","notificationsUnviewedCount":0,"inboxUnviewedCount":0}});
+		StackExchange.using.setCacheBreakers({"js/prettify-full.js":"6c261bebf56a","js/moderator.js":"ed7a8238b2f8","js/full-anon.js":"5f9bf5810297","js/full.js":"027ac5ea264e","js/wmd.js":"cff10cca4fd9","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/mobile.js":"82a79dbb7259","js/help.js":"6e6623243cf6","js/tageditor.js":"450c9e8426fc","js/tageditornew.js":"b6c68ad4c7dd","js/inline-tag-editing.js":"8e84e8a137f7","js/revisions.js":"d3e781ee5528","js/review.js":"947758ba83ea","js/tagsuggestions.js":"aa48ef6154df","js/post-validation.js":"bb996020492a","js/explore-qlist.js":"1c5bbd79b562","js/events.js":"27a33f0b2cad"});
+		
+	</script>
+	<script type="text/javascript">
+		StackExchange.using("gps", function() {
+			 StackExchange.gps.init(true);
+		});
+	</script>
+	
+<script async="" type="text/javascript" src="./stackoverflow_files/full.js"></script><script async="" type="text/javascript" src="./stackoverflow_files/post-validation.js"></script></head>
+<body class="question-page">
+	<noscript>&lt;div id="noscript-padding"&gt;&lt;/div&gt;</noscript>
+	<div id="notify-container"></div>
+	<div id="overlay-header"></div>
+	<div id="custom-header"></div>
+
+	<div class="container">
+		<div id="header">
+			<div id="portalLink">
+				<a class="genu" onclick="StackExchange.ready(function(){genuwine.click();});return false;">Stack Exchange</a>
+			</div>
+			<div id="topbar">
+				<div id="hlinks">
+					
+<span id="hlinks-user">        <span class="profile-triangle">▼</span><a href="http://stackoverflow.com/users/671801/kdtong" class="profile-link">kdtong</a>&nbsp;<a href="http://stackoverflow.com/users/671801/kdtong?tab=reputation"><span class="reputation-score" title="your reputation; view reputation changes" dir="ltr">21</span></a><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+ <span class="lsep">|</span>
+
+</span>
+<span id="hlinks-nav"></span>
+<span id="hlinks-custom">            <a href="http://chat.stackoverflow.com/">chat</a>
+
+ <span class="lsep">|</span>
+				<a href="http://meta.stackoverflow.com/">meta</a>
+
+ <span class="lsep">|</span>
+			<a href="http://stackoverflow.com/about">about</a>
+
+ <span class="lsep">|</span>
+			<a href="http://stackoverflow.com/help">help</a>
+</span>
+				</div>
+				<div id="hsearch">
+					<form id="search" action="http://stackoverflow.com/search" method="get" autocomplete="off">
+						<div>
+							<input autocomplete="off" name="q" class="textbox" placeholder="search" tabindex="1" type="text" maxlength="240" size="28" value="">
+						</div>
+					</form>
+				</div>
+			</div>
+			<br class="cbt">
+			<div id="hlogo">
+				<a href="http://stackoverflow.com/">
+					Stack Overflow
+				</a>
+			</div>
+			<div id="hmenus">
+				<div class="nav mainnavs ">
+					<ul>
+							<li class="youarehere"><a id="nav-questions" href="http://stackoverflow.com/questions">Questions</a></li>
+							<li><a id="nav-tags" href="http://stackoverflow.com/tags">Tags</a></li>
+							<li><a id="nav-users" href="http://stackoverflow.com/users">Users</a></li>
+							<li><a id="nav-badges" href="http://stackoverflow.com/help/badges">Badges</a></li>
+							<li><a id="nav-unanswered" href="http://stackoverflow.com/unanswered">Unanswered</a></li>
+					</ul>
+				</div>
+				<div class="nav askquestion">
+					<ul>
+						<li>
+							<a id="nav-askquestion" href="http://stackoverflow.com/questions/ask">Ask Question</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+
+
+
+		<div id="content">
+			
+
+<div itemscope="" itemtype="http://schema.org/Article">
+<link itemprop="image" href="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png">
+<div id="question-header">
+	<h1 itemprop="name"><a href="./stackoverflow_files/stackoverflow.html" class="question-hyperlink">How do I get started with Node.js</a></h1>
+</div>
+<div id="mainbar">
+
+	
+
+<div class="question" data-questionid="2353818" id="question">
+	
+		<input type="hidden" id="2353818-only-allow-inform-moderator-flagging" value="true">
+				<div class="everyonelovesstackoverflow" id="adzerk1">
+			</div>
+
+
+	<table>
+		<tbody><tr>
+			<td class="votecell">
+				
+
+<div class="vote">
+	<input type="hidden" name="_id_" value="2353818">
+	<a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+	<span class="vote-count-post high-scored-post">1269</span>
+	<a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+	
+	<a class="star-off" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#" title="This is a favorite question (click again to undo)">favorite</a>
+	<div class="favoritecount"><b>1652</b></div>   
+
+</div>
+
+			</td>
+			
+<td class="postcell">
+<div>
+	<div class="post-text" itemprop="description">
+
+		<p>Are there any good resources to get started with Node.JS? Any good tutorials, blogs or books?</p>
+
+<p>Of course, I have visited its official website <a href="http://nodejs.org/">http://nodejs.org/</a>, but I didn't think the documentation they have is a good starting point.</p>
+
+	</div>
+	<div class="post-taglist">
+		<a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/node.js" class="post-tag" title="show questions tagged &#39;node.js&#39;" rel="tag">node.js</a> 
+	</div>
+	<table class="fw">
+	<tbody><tr>
+	<td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/q/2353818/671801" title="short permalink to this question" class="short-link" id="link-post-2353818">share</a><span class="lsep">|</span><span class="disabled-link" title="Post is locked">edit</span><span class="lsep">|</span><a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#" class="flag-post-link" title="flag this post for serious problems or moderator attention" data-postid="2353818">flag</a></div>        
+	</td>
+	<td align="right" class="post-signature">
+
+
+	<div class="user-info ">
+		<div class="user-action-time">
+			
+
+			<a href="http://stackoverflow.com/posts/2353818/revisions" title="show all edits to this post">edited <span title="2013-01-13 16:05:55Z" class="relativetime">Jan 13 at 16:05</span></a>
+
+		</div>
+		<div class="user-gravatar32">
+			
+		</div>
+		<div class="user-details">
+			<br>
+			
+		</div>
+	</div>
+	</td>
+	<td class="post-signature">
+		
+
+	<div class="user-info">
+		<div class="user-details">
+			<span class="community-wiki" title="This post is community owned as of Oct 2 &#39;12 at 22:04. Votes do not generate reputation, and it can be edited by users with 100 rep">
+				community wiki
+			</span>
+		</div><br>
+		<div class="user-details">
+			<a id="history-2353818" href="http://stackoverflow.com/posts/2353818/revisions" title="show revision history for this post">
+8 revs, 5 users 48%<br></a><a href="http://stackoverflow.com/users/279932">Joneph O.</a>
+			
+		</div>
+	</div>
+
+	</td>
+	</tr>
+	</tbody></table>
+</div>
+</td>
+		</tr>
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+	<div id="comments-2353818" class="comments">
+		<table>
+		<tbody>
+					
+	<tr id="comment-17145941" class="comment" data-commentid="17145941">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="hot">24</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">Seeing as how this has been kept up reasonably well thus far, I see no harm in leaving it open. <b>Please, consider editing new suggestions into the existing answers rather than posting new ones.</b></span> –&nbsp;<a href="http://stackoverflow.com/users/811/shog9" title="69969 reputation" class="comment-user">Shog9<span class="mod-flair" title="moderator">♦</span></a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment17145941_2353818"><span title="2012-10-03 00:06:14Z" class="relativetime-clean">Oct 3 '12 at 0:06</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-21574504" class="comment" data-commentid="21574504">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="warm">8</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">If and of you are wondering on how to build a website using node.js and you're coming from a php'ish background, I've asked how to do <i>that</i> here <a href="http://stackoverflow.com/questions/11311672/building-a-website-using-node-js-best-practice" title="building a website using node js best practice">stackoverflow.com/questions/11311672/…</a> . I feel that's something a lot of people miss.</span> –&nbsp;<a href="http://stackoverflow.com/users/1348195/benjamin-gruenbaum" title="18228 reputation" class="comment-user">Benjamin Gruenbaum</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment21574504_2353818"><span title="2013-03-08 07:53:20Z" class="relativetime-clean">Mar 8 at 7:53</span></a></span></div></td>
+	</tr>
+
+		</tbody>
+	
+		</table>
+	</div>
+	<span id="comments-link-2353818" class="comments-link" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">comments disabled on deleted / locked posts / reviews</span>
+</td>
+</tr>    
+		</tbody></table>    
+</div>
+	<div class="question-status">
+		<h2><strong>locked</strong> by <a href="http://stackoverflow.com/users/811/shog9">Shog9</a><span class="mod-flair" title="moderator">♦</span> <span title="2013-07-19 22:30:41Z" class="relativetime">Jul 19 at 22:30</span></h2>
+		<p>This question's answer is a collaborative effort: if you see something that can be improved, just edit to improve it! <i>No additional answers can be added here</i></p>
+	</div>
+
+
+	<div id="answers">
+
+	<a name="tab-top"></a>
+	<div id="answers-header">
+		<div class="subheader answers-subheader">
+			<h2>
+					2 Answers
+			</h2>
+			<div id="tabs">
+				<a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js?answertab=active#tab-top" title="Answers with the latest activity first">active</a>
+<a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js?answertab=oldest#tab-top" title="Answers in the order they were provided">oldest</a>
+<a class="youarehere" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js?answertab=votes#tab-top" title="Answers with the highest score first">votes</a>
+
+			</div>
+		</div>    
+	</div>    
+
+
+
+
+  
+<a name="5511507"></a>
+<div id="answer-5511507" class="answer" data-answerid="5511507">
+	<table>
+		<tbody><tr>
+			<td class="votecell">
+				
+
+<div class="vote">
+	<input type="hidden" name="_id_" value="5511507">
+	<a class="vote-up-off" title="This answer is useful">up vote</a>
+	<span class="vote-count-post high-scored-post">1459</span>
+	<a class="vote-down-off" title="This answer is not useful">down vote</a>
+	
+
+
+</div>
+
+			</td>
+			
+
+
+<td class="answercell">
+	<div class="post-text"><p><strong>Tutorials</strong></p>
+
+<ul>
+<li><a href="http://www.nodebeginner.org/#hello-world">Hello World</a></li>
+<li><a href="http://www.nodebeginner.org/#building-the-application-stack">Hello World Web Server</a></li>
+<li><a href="http://nodeguide.com/">Node.js guide</a></li>
+<li><a href="http://nodetuts.com/">Node tuts</a> (video)</li>
+<li><a href="http://howtonode.org/express-mongodb">Build a blog with Node.js, express and mongodb</a></li>
+<li><a href="http://project70.com/">Node.Js Tutorials At Project 70</a></li>
+<li><a href="http://net.tutsplus.com/tutorials/javascript-ajax/node-js-for-beginners/">Node.js for Beginners</a></li>
+</ul>
+
+<p><strong>Videos</strong></p>
+
+<ul>
+<li><a href="http://www.youtube.com/watch?v=jo_B4LTHi3I">Introduction to Node.js with Ryan Dahl</a></li>
+<li><a href="http://www.infoq.com/presentations/nodejs">Node.js: Asynchronous Purity Leads to Faster Development</a></li>
+<li><a href="http://www.infoq.com/presentations/Parallel-Programming-with-Nodejs">Parallel Programming with Node.js</a></li>
+<li><a href="http://vimeo.com/18077379">Server-side JavaScript with Node, Connect &amp; Express</a></li>
+<li><a href="http://www.lynda.com/Nodejs-tutorials/Nodejs-First-Look/101554-2.html">Node.js First Look</a></li>
+<li><a href="http://www.youtube.com/watch?v=F6k8lTrAE2g">Ryan Dahl's Google Tech Talk</a></li>
+</ul>
+
+<p><strong>Screencasts</strong></p>
+
+<ul>
+<li><a href="http://nodetuts.com/">NodeTuts</a></li>
+<li><a href="http://nodecasts.net/">NodeCasts</a></li>
+</ul>
+
+<p><strong>Books</strong></p>
+
+<ul>
+<li><a href="http://nodebeginner.org/">The Node Beginner Book</a></li>
+<li><a href="http://visionmedia.github.com/masteringnode/">Mastering Node.js</a></li>
+<li><a href="http://ofps.oreilly.com/titles/9781449398583/index.html">Up and Running with Node.js</a></li>
+<li><a href="http://www.manning.com/cantelon/">Node.js in Action</a></li>
+<li><a href="http://amzn.com/B008Z5OEUY">Smashing Node.js: JavaScript Everywhere</a></li>
+<li><a href="http://www.amazon.de/dp/389864829X">Node.js &amp; Co. (in German)</a></li>
+<li><a href="http://nodejsbook.io/">Sam's Teach Yourself Node.js in 24 Hours</a></li>
+<li><a href="http://jsbooks.revolunet.com/">Most detailed list of free JavaScript Books</a></li>
+</ul>
+
+<p><strong>Courses</strong></p>
+
+<ul>
+<li><a href="http://node.codeschool.com/">Real Time Web with Node.js</a></li>
+</ul>
+
+<p><strong>Blogs</strong></p>
+
+<ul>
+<li><a href="http://blog.nodejs.org/">Ryan Dahl's Node blog</a></li>
+<li><a href="http://howtonode.org/">How To Node</a></li>
+<li><a href="http://dailyjs.com/">DailyJS</a></li>
+<li><a href="http://blog.nodejitsu.com/">Nodejitsu blog</a></li>
+<li><a href="http://www.wilcoxd.com/whitepapers/node_js/">Ryan Wilcox's Whitepaper</a></li>
+<li><a href="http://www.devthought.com/">devthought</a></li>
+</ul>
+
+<p><strong>Podcasts</strong></p>
+
+<ul>
+<li><a href="http://nodeup.com/">NodeUp</a></li>
+</ul>
+
+<p><strong>JavaScript resources</strong></p>
+
+<ul>
+<li><a href="http://yuiblog.com/crockford/">Crockford's videos</a> (must see!)</li>
+<li><a href="http://www.addyosmani.com/resources/essentialjsdesignpatterns/book/">Essential JavaScript Design Patterns For Beginners</a></li>
+<li><a href="http://bonsaiden.github.com/JavaScript-Garden/">JavaScript garden</a></li>
+<li><a href="http://oreilly.com/catalog/9780596806767">JavaScript Patterns</a> book</li>
+<li><a href="http://oreilly.com/catalog/9780596517748/">JavaScript: The Good Parts</a> book</li>
+</ul>
+
+<p><strong>Node Modules</strong></p>
+
+<ul>
+<li><a href="https://github.com/joyent/node/wiki/modules">Wiki List on Github/Joyent/Node</a> (start here last!)</li>
+<li><a href="http://search.npmjs.org/">Search for registered node.js modules</a></li>
+</ul>
+
+<p><strong>Other</strong></p>
+
+<ul>
+<li><a href="http://jsapp.us/">JSApp.US - like jsfiddle, but for node.js</a></li>
+<li><a href="https://www.ebayopensource.org/index.php/VJET/NodeJS">Node with VJET JS (for Eclipse IDE)</a></li>
+<li>Production sites with published source: 
+<ul>
+<li><a href="http://nodeknockout.com/">Node Knockout Hackathon</a> <a href="https://github.com/nko3/website">(source)</a></li>
+</ul></li>
+<li><a href="http://coding.smashingmagazine.com/2011/09/16/useful-node-js-tools-tutorials-and-resources/">Useful Node.js Tools, Tutorials and Resources</a></li>
+<li><a href="http://runnable.com/">Runnable.com - like jsfiddle, but for server side as well</a></li>
+</ul>
+</div>
+	<table class="fw">
+	<tbody><tr>
+	<td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/5511507/671801" title="short permalink to this answer" class="short-link" id="link-post-5511507">share</a><span class="lsep">|</span><span class="disabled-link" title="Question is locked">edit</span><span class="lsep">|</span><a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#" class="flag-post-link" title="flag this post for serious problems or moderator attention" data-postid="5511507">flag</a></div>                    </td>
+	<td align="right" class="post-signature">
+
+
+	<div class="user-info ">
+		<div class="user-action-time">
+			
+
+			<a href="http://stackoverflow.com/posts/5511507/revisions" title="show all edits to this post">edited <span title="2013-07-24 19:47:18Z" class="relativetime">Jul 24 at 19:47</span></a>
+
+		</div>
+		<div class="user-gravatar32">
+			
+		</div>
+		<div class="user-details">
+			<br>
+			
+		</div>
+	</div>
+	</td>
+			
+
+
+	<td align="right" class="post-signature">   
+	   
+
+	
+
+	<div class="user-info">
+		<div class="user-details">
+			<span class="community-wiki" title="This post is community owned as of Oct 2 &#39;12 at 22:04. Votes do not generate reputation, and it can be edited by users with 100 rep">
+				community wiki
+			</span>
+		</div><br>
+		<div class="user-details">
+			<a id="history-5511507" href="http://stackoverflow.com/posts/5511507/revisions" title="show revision history for this post">
+26 revs, 15 users 39%<br></a><a href="http://stackoverflow.com/users/419">Kev</a>
+			
+		</div>
+	</div>
+
+	</td>
+	</tr>
+	</tbody></table>
+</td>
+		</tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+	<div id="comments-5511507" class="comments">
+		<table>
+		<tbody>
+					
+	<tr id="comment-6976526" class="comment" data-commentid="6976526">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="warm">6</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">Are the books ordered by your value in them or randomly?  Looking to purchase a good reference manual on nodeJS's basics.</span> –&nbsp;<a href="http://stackoverflow.com/users/9908/david" title="4977 reputation" class="comment-user">David</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment6976526_5511507"><span title="2011-05-17 15:11:21Z" class="relativetime-clean">May 17 '11 at 15:11</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-6976663" class="comment" data-commentid="6976663">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">3</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">@David: More or less randomly. First two are freely available and the last one is in preview mode. I would recommend to start with The Node Beginner.</span> –&nbsp;<a href="http://stackoverflow.com/users/217288/yojimbo87" title="22506 reputation" class="comment-user">yojimbo87</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment6976663_5511507"><span title="2011-05-17 15:18:47Z" class="relativetime-clean">May 17 '11 at 15:18</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-12226676" class="comment" data-commentid="12226676">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">The second book you list, Mastering Node.js, although its current content is indeed helpful, is just half finished.</span> –&nbsp;<a href="http://stackoverflow.com/users/164999/petr-vostrel" title="1056 reputation" class="comment-user">Petr Vostrel</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment12226676_5511507"><span title="2012-03-09 11:00:42Z" class="relativetime-clean">Mar 9 '12 at 11:00</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-13853391" class="comment" data-commentid="13853391">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="warm">6</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">My book (Node up and running) is available for free here: <a href="http://ofps.oreilly.com/titles/9781449398583/" rel="nofollow">ofps.oreilly.com/titles/9781449398583</a> forever. It's also now an ebook and print.</span> –&nbsp;<a href="http://stackoverflow.com/users/53569/sh1mmer" title="977 reputation" class="comment-user">sh1mmer</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment13853391_5511507"><span title="2012-05-20 19:36:37Z" class="relativetime-clean">May 20 '12 at 19:36</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-16916350" class="comment" data-commentid="16916350">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">best way is to dive in and swim.</span> –&nbsp;<a href="http://stackoverflow.com/users/33522/chovy" title="4419 reputation" class="comment-user">chovy</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment16916350_5511507"><span title="2012-09-24 04:12:21Z" class="relativetime-clean">Sep 24 '12 at 4:12</span></a></span></div></td>
+	</tr>
+
+		</tbody>
+	
+		</table>
+	</div>
+	<a id="comments-link-5511507" class="comments-link" data-comments-count="4" title="expand to show all comments on this post" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#">show <b>4</b> more comments</a><span id="hidden-comments-link-5511507" class="comments-link dno" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add comment <span>(requires <a href="http://stackoverflow.com/help/privileges/comment">50 reputation</a>)</span></span>
+</td>
+</tr>
+	</tbody></table>
+</div>
+			<div class="everyonelovesstackoverflow" id="adzerk3">
+			</div>
+
+
+
+  
+<a name="9629682"></a>
+<div id="answer-9629682" class="answer" data-answerid="9629682">
+	<table>
+		<tbody><tr>
+			<td class="votecell">
+				
+
+<div class="vote">
+	<input type="hidden" name="_id_" value="9629682">
+	<a class="vote-up-off" title="This answer is useful">up vote</a>
+	<span class="vote-count-post ">454</span>
+	<a class="vote-down-off" title="This answer is not useful">down vote</a>
+	
+
+
+<div class="bounty-award-container"><span class="bounty-award" title="This answer has been awarded bounties worth 100 reputation by helpermethod">+100</span></div></div>
+
+			</td>
+			
+
+
+<td class="answercell">
+	<div class="post-text"><p><strong>First, learn the core concepts of Node.js:</strong></p>
+
+<ul>
+<li><p><a href="http://blog.shinetech.com/2011/08/26/asynchronous-code-design-with-node-js/">You'll want to understand the asynchronous coding style that Node encourages</a>.</p></li>
+<li><p><a href="http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/">Async != concurrent.  Understand Node's event loop</a>!</p></li>
+<li><p><a href="http://docs.nodejitsu.com/articles/getting-started/what-is-require">Node uses CommonJS-style require() for code loading; it's probably a bit different from what you're used to</a>.</p></li>
+<li><p><a href="http://nodejs.org/api/index.html">Familiarize yourself with Node's standard library</a>.  </p></li>
+</ul>
+
+<p><strong>Then, you're going to want to see what the community has to offer:</strong></p>
+
+<p>The gold standard for Node package management is <a href="http://npmjs.org/">NPM</a>.</p>
+
+<ul>
+<li><p><a href="http://docs.nodejitsu.com/articles/getting-started/npm/what-is-npm">It is a command line tool for managing your project's dependencies</a>.</p></li>
+<li><p><a href="http://nodejs.org/api/modules.html">Make sure you understand how Node and NPM interact with your project via the node_modules folder and package.json</a>.</p></li>
+<li><p><a href="http://search.npmjs.org/">NPM is also a registry of pretty much every Node package out there</a></p></li>
+</ul>
+
+<p><strong>Finally, you're going to want to know what some of the more popular packages are for various tasks:</strong></p>
+
+<p><strong>Useful Tools for Every Project:</strong></p>
+
+<ul>
+<li><a href="http://documentcloud.github.com/underscore/">Underscore</a> contains just about every core utility method you want.</li>
+<li><a href="http://coffeescript.org/">CoffeeScript</a> makes JavaScript considerably more bearable, while also keeping you out of trouble!
+<ul>
+<li>Caveat: <em>A large portion of the community frowns upon it.  If you are writing a library, you should consider regular JavaScript, to benefit from wider collaboration.</em></li>
+</ul></li>
+</ul>
+
+<p><strong>Unit Testing:</strong></p>
+
+<ul>
+<li><a href="http://vowsjs.org/">Vows</a> is a fantastic take on asynchronous testing, albeit somewhat stale.</li>
+<li><a href="http://visionmedia.github.com/expresso/">Expresso</a> is a more traditional unit testing framework.</li>
+<li><a href="https://github.com/caolan/nodeunit">node-unit</a> is another relatively traditional unit testing framework.</li>
+</ul>
+
+<p><strong>Web Frameworks:</strong></p>
+
+<ul>
+<li><a href="http://expressjs.com/">Express</a> is by far the most popular framework.</li>
+<li><a href="http://towerjs.org/">Tower</a> is an abstraction of top of Express that aims to be a Rails clone.</li>
+<li><a href="http://geddyjs.org/">Geddy</a> is another take on web frameworks.</li>
+<li><a href="https://npmjs.org/package/railway">RailwayJS</a> is a Ruby-on-Rails inspired MVC web framework.</li>
+</ul>
+
+<p><strong>Web Framework Tools:</strong></p>
+
+<ul>
+<li><a href="https://github.com/visionmedia/jade">Jade</a> is the HAML/Slim of the Node world</li>
+<li><a href="https://github.com/visionmedia/ejs">EJS</a> is a more traditional templating language.</li>
+<li>Don't forget about <a href="http://documentcloud.github.com/underscore/#template">Underscore's template method</a>!</li>
+</ul>
+
+<p><strong>Networking:</strong></p>
+
+<ul>
+<li><a href="http://www.senchalabs.org/connect/">Connect</a> is the Rack or WSGI of the Node world.</li>
+<li><a href="https://github.com/mikeal/request">Request</a> is a very popular HTTP request library.</li>
+<li><a href="https://github.com/LearnBoost/socket.io">socket.io</a> is handy for building WebSocket servers.</li>
+</ul>
+
+<p><strong>Command Line Interaction:</strong></p>
+
+<ul>
+<li><a href="https://github.com/substack/node-optimist">Optimist</a> makes argument parsing a joy.</li>
+<li><a href="https://github.com/visionmedia/commander.js">Commander</a> is another popular argument parser.</li>
+<li><a href="https://github.com/Marak/colors.js">Colors</a> makes your CLI output pretty.</li>
+</ul>
+</div>
+	<table class="fw">
+	<tbody><tr>
+	<td class="vt">
+
+
+
+
+
+
+
+
+
+
+
+<div class="post-menu"><a href="http://stackoverflow.com/a/9629682/671801" title="short permalink to this answer" class="short-link" id="link-post-9629682">share</a><span class="lsep">|</span><span class="disabled-link" title="Question is locked">edit</span><span class="lsep">|</span><a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#" class="flag-post-link" title="flag this post for serious problems or moderator attention" data-postid="9629682">flag</a></div>                    </td>
+	<td align="right" class="post-signature">
+
+
+	<div class="user-info ">
+		<div class="user-action-time">
+			
+
+			<a href="http://stackoverflow.com/posts/9629682/revisions" title="show all edits to this post">edited <span title="2013-03-17 04:03:06Z" class="relativetime">Mar 17 at 4:03</span></a>
+
+		</div>
+		<div class="user-gravatar32">
+			
+		</div>
+		<div class="user-details">
+			<br>
+			
+		</div>
+	</div>
+	</td>
+			
+
+
+	<td align="right" class="post-signature">   
+	   
+
+	
+
+	<div class="user-info">
+		<div class="user-details">
+			<span class="community-wiki" title="This post is community owned as of Oct 2 &#39;12 at 22:04. Votes do not generate reputation, and it can be edited by users with 100 rep">
+				community wiki
+			</span>
+		</div><br>
+		<div class="user-details">
+			<a id="history-9629682" href="http://stackoverflow.com/posts/9629682/revisions" title="show revision history for this post">
+4 revs, 2 users 98%<br></a><a href="http://stackoverflow.com/users/422263">Nevir</a>
+			
+		</div>
+	</div>
+
+	</td>
+	</tr>
+	</tbody></table>
+</td>
+		</tr>
+
+
+
+<tr>
+<td class="votecell"></td>
+<td>
+	<div id="comments-9629682" class="comments">
+		<table>
+		<tbody>
+					
+	<tr id="comment-13120055" class="comment" data-commentid="13120055">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="supernova">37</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">this should be the best answer</span> –&nbsp;<a href="http://stackoverflow.com/users/1153325/kamal-reddy" title="358 reputation" class="comment-user">Kamal Reddy</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment13120055_9629682"><span title="2012-04-18 17:45:42Z" class="relativetime-clean">Apr 18 '12 at 17:45</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-14633307" class="comment" data-commentid="14633307">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">under frameworks you should add <a href="http://railwayjs.com/" rel="nofollow">railwayjs.com</a></span> –&nbsp;<a href="http://stackoverflow.com/users/543601/sagivo" title="3139 reputation" class="comment-user">sagivo</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment14633307_9629682"><span title="2012-06-22 14:55:53Z" class="relativetime-clean">Jun 22 '12 at 14:55</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-23603611" class="comment" data-commentid="23603611">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span title="number of &#39;useful comment&#39; votes received" class="cool">2</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy"><a href="http://angularjs.org/" rel="nofollow">AngularJS</a> should be part of Web Framework Tools</span> –&nbsp;<a href="http://stackoverflow.com/users/286588/spp" title="474 reputation" class="comment-user">SPP</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment23603611_9629682"><span title="2013-05-09 04:08:14Z" class="relativetime-clean">May 9 at 4:08</span></a></span></div></td>
+	</tr>
+			
+	<tr id="comment-26881129" class="comment" data-commentid="26881129">
+		<td class="comment-actions"><table><tbody><tr>
+<td class="comment-score">
+<span>&nbsp;</span>
+</td>
+<td>
+<a class="comment-up comment-up-off" title="this comment adds something useful to the post">upvote</a>
+</td></tr>
+<tr><td>&nbsp;</td><td><a class="comment-flag" title="flag this comment as unconstructive, offensive, or spam">flag</a></td></tr></tbody></table></td>
+		<td class="comment-text"><div><span class="comment-copy">To help find what you are looking for please help promote <a href="http://area51.stackexchange.com/proposals/58925/tutorials?referrer=pgGowtD4yLp5KV6BJoWDSw2">Area51 StackExchange Tutorials</a>.</span> –&nbsp;<a href="http://stackoverflow.com/users/1558269/jabberwockydecompiler" title="312 reputation" class="comment-user">JabberwockyDecompiler</a> <span class="comment-date" dir="ltr"><a class="comment-link" href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js#comment26881129_9629682"><span title="2013-08-19 15:35:03Z" class="relativetime-clean">Aug 19 at 15:35</span></a></span></div></td>
+	</tr>
+
+		</tbody>
+	
+		</table>
+	</div>
+	<span id="comments-link-9629682" class="comments-link" data-comments-counts="0" title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add comment <span>(requires <a href="http://stackoverflow.com/help/privileges/comment">50 reputation</a>)</span></span>
+</td>
+</tr>
+	</tbody></table>
+</div>
+
+
+
+		<h2 class="bottom-notice">
+Not the answer you're looking for?            Browse other questions tagged <a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="show questions tagged &#39;javascript&#39;" rel="tag">javascript</a> <a href="http://stackoverflow.com/questions/tagged/node.js" class="post-tag" title="show questions tagged &#39;node.js&#39;" rel="tag">node.js</a>  or <a href="http://stackoverflow.com/questions/ask">ask your own question</a>.        </h2>
+</div>
+</div>
+<div id="sidebar" class="show-votes">
+		<div class="module question-stats">
+		<p class="label-key">tagged</p>
+		<div class="tagged"><a href="http://stackoverflow.com/questions/tagged/javascript" class="post-tag" title="" rel="tag">javascript</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">429814</span></span><br>
+<a href="http://stackoverflow.com/questions/tagged/node.js" class="post-tag" title="show questions tagged &#39;node.js&#39;" rel="tag">node.js</a>&nbsp;<span class="item-multiplier"><span class="item-multiplier-x">×</span>&nbsp;<span class="item-multiplier-count">27578</span></span><br>
+</div>
+		<table id="qinfo">
+			<tbody><tr>
+				<td><p class="label-key">asked</p></td>
+				<td style="padding-left:10px"><p class="label-key" title="2010-03-01 04:09:28Z"><b>3 years ago</b></p></td>
+			</tr>
+			<tr>
+				<td><p class="label-key">viewed</p></td>
+
+				<td style="padding-left:10px">
+					<p class="label-key">
+						<b>287827 times</b>
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td><p class="label-key">active</p></td>
+				<td style="padding-left:10px"><p class="label-key"><b><a href="http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js?lastactivity" class="lastactivity-link" title="2013-07-24 19:47:18Z">1 month ago</a></b></p></td>
+			</tr>
+		</tbody></table>
+	</div>
+		
+					<script type="text/javascript">
+					var scriptSrc = "http://engine.adzerk.net/z/8277/adzerk1_2_4_43,adzerk2_2_17_45,adzerk3_2_4_44?keywords=javascript,node.js,x-user-registered";
+					if (document.referrer) {
+						if (/\?/.test(scriptSrc))
+							scriptSrc += "&";
+						else
+							scriptSrc += "?";
+						scriptSrc += "xReferrer=" + document.referrer;
+					}
+					StackExchange.ready(function() {
+						var z = document.createElement("script");
+						z.type = "text/javascript";
+						z.async = "true";
+						z.src = scriptSrc;
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(z, s);
+					});
+				</script>
+			<div class="everyonelovesstackoverflow" id="adzerk2">
+			</div>
+	<div id="hireme">
+		<script type="text/javascript">
+window.careers_adurl="http://careers.stackoverflow.com/gethired/js",window.careers_cssurl="//cdn-careers.sstatic.net/careers/gethired/sidebar.min.css?v=17be6ca0db4b",window.careers_leaderboardcssurl="//cdn-careers.sstatic.net/careers/gethired/ninja.min.css?v=78ccbfa5c59f",window.careers_companycssurl="//cdn-careers.sstatic.net/careers/gethired/company",window.careers_adselector="div.hireme, div#hireme",StackExchange.ready(function(){$.ajax({url:"//cdn-careers.sstatic.net/careers/gethired/loader.min.js?v=607ab2dda910",dataType:"script",cache:!0})})        </script>
+	</div>
+
+
+
+	  
+	
+	<div class="module sidebar-linked">
+		<h4 id="h-linked">Linked</h4>
+		<div class="linked" data-tracker="lq=1">
+			<div class="spacer">
+<a href="http://stackoverflow.com/q/4274167?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">19</div>
+</a>
+<a href="http://stackoverflow.com/questions/4274167/how-to-start-node-js?lq=1" class="question-hyperlink">How to start node.js?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/8744778?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">-5</div>
+</a>
+<a href="http://stackoverflow.com/questions/8744778/getting-started-with-node-js?lq=1" class="question-hyperlink">Getting started with Node.js</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/14863812?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/14863812/there-is-tutorial-for-pure-node-js?lq=1" class="question-hyperlink">there is tutorial for PURE node.js?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/12461485?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/12461485/what-guide-tutorial-should-i-choose-to-begin-learning-node-js-for-a-multiplayer?lq=1" class="question-hyperlink">What guide/tutorial should I choose to begin learning node.js for a multiplayer game?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/16828356?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/16828356/tutorials-and-also-small-node-js-projects-to-learn-the-core-api?lq=1" class="question-hyperlink">Tutorials and also small Node.js projects to learn the core api</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/11311672?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">37</div>
+</a>
+<a href="http://stackoverflow.com/questions/11311672/building-a-website-using-node-js-best-practice?lq=1" class="question-hyperlink">Building a website using node.js - best practice</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/6040012?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">11</div>
+</a>
+<a href="http://stackoverflow.com/questions/6040012/just-picking-up-node-should-i-use-express-or-really-learn-node-first?lq=1" class="question-hyperlink">Just picking up node. Should I use express or really learn node first?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/7947195?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">4</div>
+</a>
+<a href="http://stackoverflow.com/questions/7947195/start-with-node-js-as-a-complete-server-side-newbie?lq=1" class="question-hyperlink">Start with node.js as a complete server-side newbie?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/15331440?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes default">-6</div>
+</a>
+<a href="http://stackoverflow.com/questions/15331440/how-can-i-use-nodejs-with-windows-7?lq=1" class="question-hyperlink">How can I use Nodejs with Windows 7?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/10531162?lq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">5</div>
+</a>
+<a href="http://stackoverflow.com/questions/10531162/node-js-and-socket-io-how-far-can-they-go-with-real-time-web-applications?lq=1" class="question-hyperlink">Node.js and Socket.io - how far can they go with real time web applications?</a>
+</div>
+<div class="spacer more">
+<a href="http://stackoverflow.com/questions/linked/2353818?lq=1">see more linked questions…</a></div>
+
+		</div>
+	</div>
+	<div class="module sidebar-related">
+		<h4 id="h-related">Related</h4>
+		<div class="related" data-tracker="rq=1">
+			<div class="spacer">
+<a href="http://stackoverflow.com/q/1884724?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">510</div>
+</a>
+<a href="http://stackoverflow.com/questions/1884724/what-is-node-js?rq=1" class="question-hyperlink">What is Node.js?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/1911015?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">297</div>
+</a>
+<a href="http://stackoverflow.com/questions/1911015/how-to-debug-node-js-applications?rq=1" class="question-hyperlink">How to debug node.js applications</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/1972242?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">116</div>
+</a>
+<a href="http://stackoverflow.com/questions/1972242/auto-reload-of-files-in-node-js?rq=1" class="question-hyperlink">Auto-reload of files in Node.js</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/3629784?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">102</div>
+</a>
+<a href="http://stackoverflow.com/questions/3629784/how-is-node-js-inherently-faster-when-it-still-relies-on-threads-internally?rq=1" class="question-hyperlink">How is Node.js inherently faster when it still relies on Threads internally?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/4274167?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">19</div>
+</a>
+<a href="http://stackoverflow.com/questions/4274167/how-to-start-node-js?rq=1" class="question-hyperlink">How to start node.js?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/4542694?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">70</div>
+</a>
+<a href="http://stackoverflow.com/questions/4542694/getting-started-setup-database-for-node-js?rq=1" class="question-hyperlink">Getting-started: Setup Database for Node.js</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/5062614?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted large">691</div>
+</a>
+<a href="http://stackoverflow.com/questions/5062614/how-to-decide-when-to-use-nodejs?rq=1" class="question-hyperlink">How to decide when to use NodeJS?</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/8345710?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes default">3</div>
+</a>
+<a href="http://stackoverflow.com/questions/8345710/getting-started-with-node-js-in-windows-x86?rq=1" class="question-hyperlink">Getting started with NODE.JS in windows x86</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/16712847?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/16712847/how-to-get-a-method-name-inside-a-method-node-js?rq=1" class="question-hyperlink">How to get a method name inside a method node.js</a>
+</div>
+<div class="spacer">
+<a href="http://stackoverflow.com/q/17401823?rq=1" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">0</div>
+</a>
+<a href="http://stackoverflow.com/questions/17401823/how-do-i-get-started-with-node-js?rq=1" class="question-hyperlink">How do I get started with Node.js</a>
+</div>
+
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+StackExchange.ready(function(){$.get('/posts/2353818/ivc/0b1a');});
+</script>
+<noscript>
+	&lt;div&gt;&lt;img src="/posts/2353818/ivc/0b1a" class="dno" alt="" width="0" height="0"&gt;&lt;/div&gt;
+</noscript><div style="display:none" id="prettify-lang">lang-js</div></div>
+
+
+		</div>
+	</div>
+	<div id="footer" class="categories">
+		<div class="footerwrap">
+			<div id="footer-menu">
+				<div class="top-footer-links">
+						<a href="http://stackoverflow.com/about">about</a>
+					<a href="http://stackoverflow.com/help">help</a>
+					<a href="http://blog.stackexchange.com/?blb=1">blog</a>
+						<a href="http://chat.stackoverflow.com/">chat</a>
+					<a href="http://data.stackexchange.com/">data</a>
+					<a href="http://stackexchange.com/legal">legal</a>
+					<a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+					<a href="http://stackexchange.com/about/hiring">jobs</a>
+					<a href="http://engine.adzerk.net/r?e=eyJhdiI6NDE0LCJhdCI6MjAsImNtIjo5NTQsImNoIjoxMTc4LCJjciI6Mjc3NiwiZG0iOjQsImZjIjoyODYyLCJmbCI6Mjc1MSwibnciOjIyLCJydiI6MCwicHIiOjExNSwic3QiOjAsInVyIjoiaHR0cDovL3N0YWNrb3ZlcmZsb3cuY29tL2Fib3V0L2NvbnRhY3QiLCJyZSI6MX0&s=hRods5B22XvRBwWIwtIMekcyNF8">advertising info</a>
+
+					<a onclick="StackExchange.switchMobile(&quot;on&quot;, &quot;/questions/2353818/how-do-i-get-started-with-node-js&quot;)">mobile</a>
+					<b><a href="http://stackoverflow.com/contact">contact us</a></b>
+						<b><a href="http://meta.stackoverflow.com/">feedback</a></b>
+					
+				</div>
+				<div id="footer-sites">
+					<table>
+	<tbody><tr>
+			<th colspan="3">
+				Technology
+			</th>
+			<th>
+				Life / Arts
+			</th>
+			<th>
+				Culture / Recreation
+			</th>
+			<th>
+				Science
+			</th>
+			<th>
+				Other
+			</th>
+	</tr>
+	<tr>
+			<td>
+				<ol>
+						<li><a href="http://stackoverflow.com/" title="professional and enthusiast programmers">Stack Overflow</a></li>
+						<li><a href="http://serverfault.com/" title="professional system and network administrators">Server Fault</a></li>
+						<li><a href="http://superuser.com/" title="computer enthusiasts and power users">Super User</a></li>
+						<li><a href="http://webapps.stackexchange.com/" title="power users of web applications">Web Applications</a></li>
+						<li><a href="http://askubuntu.com/" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+						<li><a href="http://webmasters.stackexchange.com/" title="pro webmasters">Webmasters</a></li>
+						<li><a href="http://gamedev.stackexchange.com/" title="professional and independent game developers">Game Development</a></li>
+						<li><a href="http://tex.stackexchange.com/" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+							</ol></td><td><ol>
+						<li><a href="http://programmers.stackexchange.com/" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+						<li><a href="http://unix.stackexchange.com/" title="users of Linux, FreeBSD and other Un*x-like operating systems.">Unix &amp; Linux</a></li>
+						<li><a href="http://apple.stackexchange.com/" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+						<li><a href="http://wordpress.stackexchange.com/" title="WordPress developers and administrators">WordPress Answers</a></li>
+						<li><a href="http://gis.stackexchange.com/" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+						<li><a href="http://electronics.stackexchange.com/" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+						<li><a href="http://android.stackexchange.com/" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+						<li><a href="http://security.stackexchange.com/" title="IT security professionals">IT Security</a></li>
+							</ol></td><td><ol>
+						<li><a href="http://dba.stackexchange.com/" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+						<li><a href="http://drupal.stackexchange.com/" title="Drupal developers and administrators">Drupal Answers</a></li>
+						<li><a href="http://sharepoint.stackexchange.com/" title="SharePoint enthusiasts">SharePoint</a></li>
+						<li><a href="http://ux.stackexchange.com/" title="user experience researchers and experts">User Experience</a></li>
+						<li><a href="http://mathematica.stackexchange.com/" title="users of Mathematica">Mathematica</a></li>
+					
+						<li>
+							<a href="http://stackexchange.com/sites#technology" class="more">
+								more (13)
+							</a>
+						</li>
+				</ol>
+			</td>
+			<td>
+				<ol>
+						<li><a href="http://photo.stackexchange.com/" title="professional, enthusiast and amateur photographers">Photography</a></li>
+						<li><a href="http://scifi.stackexchange.com/" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+						<li><a href="http://cooking.stackexchange.com/" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+						<li><a href="http://diy.stackexchange.com/" title="contractors and serious DIYers">Home Improvement</a></li>
+					
+						<li>
+							<a href="http://stackexchange.com/sites#lifearts" class="more">
+								more (13)
+							</a>
+						</li>
+				</ol>
+			</td>
+			<td>
+				<ol>
+						<li><a href="http://english.stackexchange.com/" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+						<li><a href="http://skeptics.stackexchange.com/" title="scientific skepticism">Skeptics</a></li>
+						<li><a href="http://judaism.stackexchange.com/" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+						<li><a href="http://travel.stackexchange.com/" title="road warriors and seasoned travelers">Travel</a></li>
+						<li><a href="http://christianity.stackexchange.com/" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+						<li><a href="http://gaming.stackexchange.com/" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+						<li><a href="http://bicycles.stackexchange.com/" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+						<li><a href="http://rpg.stackexchange.com/" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+					
+						<li>
+							<a href="http://stackexchange.com/sites#culturerecreation" class="more">
+								more (21)
+							</a>
+						</li>
+				</ol>
+			</td>
+			<td>
+				<ol>
+						<li><a href="http://math.stackexchange.com/" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+						<li><a href="http://stats.stackexchange.com/" title="statisticians, data analysts, data miners and data visualization experts">Cross Validated (stats)</a></li>
+						<li><a href="http://cstheory.stackexchange.com/" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+						<li><a href="http://physics.stackexchange.com/" title="active researchers, academics and students of physics">Physics</a></li>
+						<li><a href="http://mathoverflow.net/" title="professional mathematicians">MathOverflow</a></li>
+					
+						<li>
+							<a href="http://stackexchange.com/sites#science" class="more">
+								more (7)
+							</a>
+						</li>
+				</ol>
+			</td>
+			<td>
+				<ol>
+						<li><a href="http://stackapps.com/" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+						<li><a href="http://meta.stackoverflow.com/" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Overflow</a></li>
+						<li><a href="http://area51.stackexchange.com/" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+						<li><a href="http://careers.stackoverflow.com/">Stack Overflow Careers</a></li>
+					
+				</ol>
+			</td>
+	</tr>
+</tbody></table>
+				</div>
+			</div>
+
+			<div id="copyright">
+				site design / logo © 2013 stack exchange inc; 
+				user contributions licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc-wiki</a> 
+				with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+			</div>
+			<div id="footer-flair">
+				<a href="http://creativecommons.org/licenses/by-sa/3.0/" class="cc-wiki-link"></a>
+			</div>
+			<div id="svnrev">
+				rev 2013.8.28.977
+			</div>
+			
+		</div>
+	</div>
+	<noscript>
+		&lt;div id="noscript-warning"&gt;Stack Overflow works best with JavaScript enabled&lt;img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"&gt;&lt;/div&gt;
+	</noscript>
+
+	<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-5620270-1']);
+		_gaq.push(['_setCustomVar', 1, 'tags', '|javascript|node.js|']); 
+		_gaq.push(['_setCustomVar', 2, 'accountid', '341288',2]); 
+_gaq.push(['_trackPageview']);
+	var _qevents = _qevents || [];
+	(function () {
+		var ssl='https:'==document.location.protocol,
+			s=document.getElementsByTagName('script')[0],
+			ga=document.createElement('script');
+		ga.type='text/javascript';
+		ga.async=true;
+		ga.src=(ssl?'https://ssl':'http://www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(ga,s);
+		var sc=document.createElement('script');
+		sc.type='text/javascript';
+		sc.async=true;
+		sc.src=(ssl?'https://secure':'http://edge')+'.quantserve.com/quant.js';
+		s.parentNode.insertBefore(sc,s);
+	})();
+	_qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+	</script>        
+	
+
+<div><style id="PKT_BM_STYLE">			#PKT_BM_OVERLAY			{				visibility:hidden;				position:fixed;				top:0px !important;				left:0px !important;				width:100% !important;				height:80px;				-webkit-box-shadow:0px 0px 20px rgba(0,0,0,0.4);				-moz-box-shadow:0px 0px 20px rgba(0,0,0,0.4);				-o-box-shadow:0px 0px 20px rgba(0,0,0,0.4);				box-shadow:0px 0px 20px rgba(0,0,0,0.4);				z-index:2147483647;				background: rgb(239,239,239);				background: -moz-linear-gradient(top, rgba(239,239,239,0.98) 0%, rgba(253,253,253,0.98) 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,239,239,0.98)), color-stop(100%,rgba(253,253,253,0.98)));				background: -webkit-linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				background: -o-linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				background: -ms-linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				background: linear-gradient(top, rgba(239,239,239,0.98) 0%,rgba(253,253,253,0.98) 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#fdfdfd',GradientType=0 );				border-bottom:1px solid white;				font-size:20px !important;				font-family:HelveticaNeue,Helvetica,Arial !important;				line-height:80px !important;				text-align: left;				color: #4b4b4b !important;				-webkit-backface-visibility: hidden;				-webkit-perspective: 1000;			}						#PKT_BM_RAINBOWDASH			{				width: 100%;				height: 6%;			}						#PKT_BM_RAINBOWDASH div			{				float: left;				width: 25%;				height: 100%;			}						#PKT_BM_OVERLAY_LOGO			{				display: block;				width: 200px;				height: 75px;				float: left;				background: url(chrome-extension://niloccemoadcdkdjlinkgdfekeahmflj/img/pocket-logo.png) left center no-repeat;			}			.PKT_mobile #PKT_BM_OVERLAY_LOGO			{				display: none;			}			.PKT_desktop #PKT_BM_OVERLAY_LABEL			{				position: absolute;				top: 0px;				left: 0px;				text-align:center;				width: 100%;				height: 100%;				z-index: -1;				padding: 0px;				line-height:80px !important;				font-weight: bold;			}						#PKT_BM_OVERLAY_WRAPPER			{				padding-left:7%;				padding-right: 7%;				height: 100%;			}						.PKT_BM_BTN			{				float: right;				margin-top: 22px;				margin-left: 20px;				width: 80px;				height: 30px;				line-height: 30px;				visibility:hidden;				border:1px solid #a4a4a4;				text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);				-webkit-box-shadow: 0px 1px 0px white;				-moz-box-shadow: 0px 1px 0px white;				-o-box-shadow: 0px 1px 0px white;				box-shadow: 0px 1px 0px white;				-webkit-border-radius: 6px;				-moz-border-radius: 6px;				-o-border-radius: 6px;				border-radius: 6px;				text-align:center !important;				font-size:0.7em !important;				color:black !important;				font-weight:bold !important;				background: rgb(250,213,64);				background: -moz-linear-gradient(top, rgba(250,213,64,1) 0%, rgba(251,182,74,1) 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(250,213,64,1)), color-stop(100%,rgba(251,182,74,1)));				background: -webkit-linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				background: -o-linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				background: -ms-linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				background: linear-gradient(top, rgba(250,213,64,1) 0%,rgba(251,182,74,1) 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fad540', endColorstr='#fbb64a',GradientType=0 );				text-decoration: none !important;			}			.PKT_BM_BTN:hover			{				background: rgb(251,182,74);				background: -moz-linear-gradient(top, rgba(251,182,74,1) 0%, rgba(250,213,64,1) 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,182,74,1)), color-stop(100%,rgba(250,213,64,1)));				background: -webkit-linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				background: -o-linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				background: -ms-linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				background: linear-gradient(top, rgba(251,182,74,1) 0%,rgba(250,213,64,1) 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbb64a', endColorstr='#fad540',GradientType=0 );				cursor: pointer;			}			.PKT_BM_BTN.gray			{				background: #f9f9f9;				background: -moz-linear-gradient(top, #f9f9f9 0%, #ebecec 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#ebecec));				background: -webkit-linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				background: -o-linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				background: -ms-linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				background: linear-gradient(top, #f9f9f9 0%,#ebecec 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9f9f9', endColorstr='#ebecec',GradientType=0 );			}			.PKT_BM_BTN.gray:hover			{				background: #ebecec;				background: -moz-linear-gradient(top, #ebecec 0%, #f9f9f9 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebecec), color-stop(100%,#f9f9f9));				background: -webkit-linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				background: -o-linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				background: -ms-linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				background: linear-gradient(top, #ebecec 0%,#f9f9f9 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebecec', endColorstr='#f9f9f9',GradientType=0 );			}			.PKT_BM_BTN.pkt_green			{				background: #81dbd6;				background: -moz-linear-gradient(top, #81dbd6 0%, #74c5c1 100%);				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#81dbd6), color-stop(100%,#74c5c1));				background: -webkit-linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				background: -o-linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				background: -ms-linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				background: linear-gradient(top, #81dbd6 0%,#74c5c1 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#81dbd6', endColorstr='#74c5c1',GradientType=0 );			}			.PKT_BM_BTN.pkt_green:hover			{				background: #74c5c1;				background: -moz-linear-gradient(bottom, #81dbd6 0%, #74c5c1 100%);				background: -webkit-gradient(linear, left bottom, left bottom, color-stop(0%,#81dbd6), color-stop(100%,#74c5c1));				background: -webkit-linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				background: -o-linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				background: -ms-linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				background: linear-gradient(bottom, #81dbd6 0%,#74c5c1 100%);				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#74c5c1', endColorstr='#81dbd6',GradientType=0 );			}			.PKT_BM_BTN div			{				display: block;			}			#PKT_FORM			{				height: 100%;				width: 100%; 				display: block !important;				visibility: visible !important;				margin: 0px !important;				padding: 0px !important;				font-size: 20px !important;			}			.PKT_mobile #PKT_FORM{				position: absolute;				top: 0px;				right: 0.5em;				width: 86%;			}			.PKT_mobile #PKT_BM_BTN{				margin-top: 17px !important;			}			.PKT_mobile #PKT_BM_VL_BTN{				display: none;			}			#PKT_BM_OVERLAY_INPUT			{				display: none;			}			.PKT_SHOW_INPUT #PKT_BM_OVERLAY_INPUT			{				position: absolute !important;				display: block !important;				top: 19px !important;				left: 0% !important;				width: 57%;				height: 25px !important;				border: 1px solid #c9c9c9 !important;				margin: 0px !important;				padding: 0px 0px 0px 5px !important;				font-size: 15px !important;				color: #666666 !important;				background: white !important;				line-height: normal;								/* overrides */				font-family: Arial !important;				-webkit-box-shadow: none !important;				-moz-box-shadow: none !important;				box-shadow: none !important;				-webkit-border-radius: 0px !important;				-moz-border-radius: 0px !important;				border-radius: 0px !important;			}			.PKT_desktop #PKT_BM_OVERLAY_INPUT			{				position: static !important;				width: 305px !important;			}			#PKT_BM_OVERLAY_INPUT_CONTAINER {				float: right;				margin-top: 24px !important;				position: static !important;				width: 305px !important;				margin-right: 10px;			}			.PKT_SHOW_INPUT #PKT_BM_OVERLAY_LABEL			{				visibility: hidden;			}									/* Autcomplete.js css file */			.aListCon {				display : none;			}			.aWrapper {				color: #666666 !important;				float: right;				position: static !important;				width: 305px !important;				display: block !important;				top: 0px !important;				left: 0px !important;				zoom : 1;				height : 0px;				vertical-align : top;				overflow : visible;			}			.aCon {				position : relative !important;				z-index : 999999 !important;				top : 0px !important;				display : block !important;				margin-top: 0px !important;			}			.aList {				display : block !important;				margin : 0px !important;				padding : 0px !important;				border : 1px solid #7f9db9 !important;				background-color : #fff !important;				color : #1a2731 !important;				list-style-type : none !important;				cursor : default !important;;				font-family:HelveticaNeue,Helvetica,Arial !important;				font-size: 15px !important;			}			.aLim {				display : block !important;				padding : 3px 6px 2px 6px !important;				line-height : 1.2em !important;				white-space : nowrap !important;			}			</style>						</div></body></html>
