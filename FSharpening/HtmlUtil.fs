@@ -21,7 +21,17 @@ module HtmlUtil =
                         sb.Append(ConvertTo(childNode):string) |> ignore
 
         match node.NodeType with
-            | HtmlNodeType.Text -> sb.Append ((node :?> HtmlTextNode).Text) |> ignore
+            | HtmlNodeType.Text -> 
+
+                let parentName = node.ParentNode.Name
+                let nodeText = (node :?> HtmlTextNode).Text
+
+                if parentName <> "script" 
+                    && parentName <> "style" 
+                    && nodeText.Trim().Length > 0
+                    && not (HtmlNode.IsOverlappedClosingElement(nodeText))  then                   
+                    sb.Append (WebUtility.HtmlDecode(nodeText)) |> ignore
+
             | HtmlNodeType.Document -> 
 
                 parseChildren(node)

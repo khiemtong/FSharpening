@@ -30,7 +30,7 @@ module HtmlToText =
         let result = Array.fold (fun acc elem -> acc + elem) "" htmlLines
 
 
-        use sr = new StreamWriter("result.txt", true)
+        use sr = new StreamWriter("result.txt", false)
         
         sr.Write(HtmlUtil.ConvertHtml(result))
                 
