@@ -1,5 +1,3 @@
-* Hi everyone. I'm Khiem, I'm an engineer a real estate startup called Homesnap and co-organizer along with Riccardo and Jason.
-
 * Today I'm going to talk about currying and partial application.
 * To do this, I'm going to just walk through a F# script file with examples.
 * So let's jump right into it.
