@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSharpening", "FSharpening\FSharpening.fsproj", "{92A2BBFF-73E4-4575-8190-7C43206DB0FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curry.Demo", "Curry.Console\Curry.Demo.csproj", "{3992A575-3AE0-42AE-AD95-E93AA8B95351}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CurryingPartialAppDemo", "CurryingPartialAppDemo\CurryingPartialAppDemo.fsproj", "{239AF01C-B888-4A11-917D-6286333D53A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92A2BBFF-73E4-4575-8190-7C43206DB0FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92A2BBFF-73E4-4575-8190-7C43206DB0FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92A2BBFF-73E4-4575-8190-7C43206DB0FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92A2BBFF-73E4-4575-8190-7C43206DB0FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3992A575-3AE0-42AE-AD95-E93AA8B95351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3992A575-3AE0-42AE-AD95-E93AA8B95351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3992A575-3AE0-42AE-AD95-E93AA8B95351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3992A575-3AE0-42AE-AD95-E93AA8B95351}.Release|Any CPU.Build.0 = Release|Any CPU
+		{239AF01C-B888-4A11-917D-6286333D53A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{239AF01C-B888-4A11-917D-6286333D53A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{239AF01C-B888-4A11-917D-6286333D53A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{239AF01C-B888-4A11-917D-6286333D53A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
